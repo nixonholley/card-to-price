@@ -28,7 +28,7 @@ class StreamState(BaseModel, typing.Generic[StreamStateValueT]):
 
 class YugiohCard(BaseModel):
     name: typing.Optional[str] = None
-    type: typing.Optional[str] = None
+    attribute: typing.Optional[str] = None
     stars: typing.Optional[int] = None
     ATK: typing.Optional[int] = None
     DEF: typing.Optional[int] = None

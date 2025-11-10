@@ -4,9 +4,10 @@ class YugiohCard {
     Name of the card, located at the upper-left corner.
   "#)
 
-  type string @description(#"
+  attribute string @description(#"
     Card classification, located in the top-right corner inside a colored attribute box.
-    Examples: 'Dragon / Effect', 'Spell Card', 'Trap Card'.
+    It can be a monster card, 'Spell Card', or 'Trap Card'.
+    If it's a monster card is can be 'Dark', 'Light', 'Fire', 'Water', 'Earth', 'Wind', or 'Divine'
   "#)
 
   stars int @description(#"
@@ -36,8 +37,10 @@ class YugiohCard {
     for video game and database indexing.
   "#)
 
-  edition string?  @description(#"
-    Text indicating printing edition (e.g., '1st Edition', 'Unlimited Edition').
+  edition string @description(#"
+    This is sometimes text indicating printing edition (e.g., '1st Edition'), 
+    but a sure way to tell is if the foil in the bottom right
+    is gold it is '1st Edition', if it is silver it is 'Unlimited Edition'.
   "#)
 }
 

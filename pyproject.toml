@@ -8,4 +8,6 @@ dependencies = [
     "baml-cli>=0.1.0",
     "baml-py>=0.213.0",
     "dotenv>=0.9.9",
+    "requests>=2.32.5",
+    "yugioh>=0.0.26",
 ]

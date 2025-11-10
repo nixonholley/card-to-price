@@ -53,7 +53,7 @@ class YugiohCardAst:
     def __init__(self, tb: type_builder.TypeBuilder):
         _tb = tb._tb # type: ignore (we know how to use this private attribute)
         self._bldr = _tb.class_("YugiohCard")
-        self._properties: typing.Set[str] = set([  "name",  "type",  "stars",  "ATK",  "DEF",  "description",  "card_number",  "video_game_identifier",  "edition",  ])
+        self._properties: typing.Set[str] = set([  "name",  "attribute",  "stars",  "ATK",  "DEF",  "description",  "card_number",  "video_game_identifier",  "edition",  ])
         self._props = YugiohCardProperties(self._bldr, self._properties)
 
     def type(self) -> baml_py.FieldType:
@@ -86,8 +86,8 @@ class YugiohCardProperties:
         return type_builder.ClassPropertyViewer(self.__bldr.property("name"))
     
     @property
-    def type(self) -> type_builder.ClassPropertyViewer:
-        return type_builder.ClassPropertyViewer(self.__bldr.property("type"))
+    def attribute(self) -> type_builder.ClassPropertyViewer:
+        return type_builder.ClassPropertyViewer(self.__bldr.property("attribute"))
     
     @property
     def stars(self) -> type_builder.ClassPropertyViewer:

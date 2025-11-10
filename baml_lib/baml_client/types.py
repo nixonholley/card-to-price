@@ -46,14 +46,14 @@ def all_succeeded(checks: typing.Dict[CheckName, Check]) -> bool:
 
 class YugiohCard(BaseModel):
     name: str
-    type: str
+    attribute: str
     stars: int
     ATK: int
     DEF: int
     description: str
     card_number: str
     video_game_identifier: int
-    edition: typing.Optional[str] = None
+    edition: str
 
 # #########################################################################
 # Generated type aliases (0)
